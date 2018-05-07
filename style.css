@@ -1,22 +1,27 @@
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;}
 li{list-style: none;}
 a{text-decoration: none;}
-/* body{background: #ECE9E4;} */
 
 .icon {width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden;}
 .clearfix{content: ''; display: block; clear: both;}
 .container{max-width: 1200px; margin: 0 auto; box-shadow: 0 0 10px #ECE9E4;}
 
-header{height: 600px; background-image: url(./img/header.jpg); background-size: 100% 100%; position: relative;}
-header .logo,header nav,header h1,header p,header .down,header .media{position: absolute; color: white; z-index: 1;}
+header{width: 1200px; height: 600px; background-image: url(./img/header.jpg); background-size: 100% 100%; position: relative;}
+header .topNavBar{z-index: 2; width: 100%; height: 140px; display: flex; flex-direction: row; align-items: center; 
+  position: fixed; transition: all 0.5s;}
+header .topNavBar.active{width: 1200px; height: 80px; background: white; box-shadow: 0 3px 10px #ECE9E4;}
+header .topNavBar.active .logo{background: #9A9DA2;}
+header .topNavBar.active nav>ul>li span{background: #FA6A2E;}
+header .topNavBar.active nav>ul>li>a{color: black;}
+header h1,header p,header .down,header .media{position: absolute; color: white; z-index: 1;}
 header::after{content: ''; display: block; width: 100%; height: 100%; background: #444450; opacity: 0.9;}
-header nav{right: 100px; top: 50px;}
+header nav{margin-left: 650px;}
 header nav>ul>li{float: left; margin-right: 20px; font-size: 14px;}
 header nav>ul>li span{display: block; width: 100%; height: 3px; margin-top: 10px; background: white; transform: translateX(-100%); 
   opacity: 0; transition: all 0.5s;}
 header nav>ul>li:hover span{transform: translateX(0); opacity: 1;}
 header nav>ul>li>a{color: white;}
-header .logo{width: 34px; height: 34px; background: white; top: 40px; left: 200px; transform: rotateZ(45deg);}
+header .logo{width: 34px; height: 34px; background: white; transform: rotateZ(45deg) translateX(141px) translateY(-141px);}
 header .logo>div{width: 34px; height: 34px; background: #FA6A2E; position: absolute; top: -6px; left: 6px;
   text-align: center; line-height: 34px;}
 header .logo>div>span{display: inline-block; transform: rotateZ(-45deg); font-weight: 700;}
