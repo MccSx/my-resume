@@ -35,11 +35,12 @@ header .media a{margin-top: 40px; color: #E6E6E9; font-size: 24px; padding: 6px;
 header .media a:nth-child(3){font-size: 28px;}
 header .media a:hover{background: rgba(0, 0, 0, 0.2);}
 
-.about{max-width: 800px; margin: 0 auto; display: flex; flex-direction: row; transform: translateY(-160px);}
-.about .left{width: 50%;}
+.about{max-width: 850px; margin: 0 auto; display: flex; flex-direction: row; transform: translateY(-160px);}
+.about .left{width: 45%;}
 .about .left .image{padding: 5px; background: white; outline: 1px solid #ECE9E4;}
 .about .left .self>h2{font-weight: 500; margin-top: 20px;}
-.about .left .self>p{font-size: 14px;}
+.about .left .self>p{font-size: 14px; margin-top: 10px;}
+.about .left .self>p>span{font-size: 16px;}
 .about .left .self>ul{margin-top: 20px;}
 .about .left .self li{border-bottom: 2px solid #ECECEC; padding: 10px 0; position: relative;}
 .about .left .self li .my-key{color: #FA6A2E; font-weight: 600;}
@@ -52,11 +53,20 @@ header .media a:hover{background: rgba(0, 0, 0, 0.2);}
   transition: all 0.5s;}
 .about .right .download-wrapper a:hover{box-shadow: 0px 4px 13px 0px #FA6A2E;}
 
-.portfolio{padding: 0 200px; position: relative;}
-.portfolio h2{font-weight: 500;}
-.portfolio p{font-size: 12px; line-height: 60px;}
+.portfolio{padding: 0 170px; position: relative;}
+.portfolio>h2{font-weight: 500;}
+.portfolio>p{font-size: 12px; line-height: 60px;}
 .portfolio>div{display: flex; flex-direction: row;}
-.portfolio .works{margin-left: 27px; box-shadow: 0 0 2px #E9E8E4; height: 270px;}
+.portfolio .works{margin-left: 27px; box-shadow: 0 0 8px #ECE9E4; height: 270px; position: relative;}
 .portfolio #music,.portfolio #vue-works,.portfolio #react-works{margin-left: 0;}
 .portfolio .row1,.portfolio .row2{margin-bottom: 27px;}
-.portfolio .bg{position: absolute;}
+.portfolio .bg{position: absolute; width: 100%; height: 100%; background: #FA6A2E; opacity: 0; 
+    top: 0; left: 0; border: 5px solid white;color: black; transition: all 0.5s;}
+.portfolio .bg h4{font-weight: normal; text-align: center; font-size: 18px;}
+.portfolio .bg p{font-size: 13px; text-align: left; margin: 10px 0;}
+.portfolio .bg p>span{font-size: 14px;}
+.portfolio .bg ul{margin-top: 20px;}
+.portfolio .bg ul>li{float: left;width: 50%; text-align: center;}
+.portfolio .bg ul>li>a:hover{box-shadow: 0px 4px 13px 0px black;}
+.portfolio .bg ul>li>a{color: black;border: 1px dashed black; border-radius: 3px; padding: 5px;}
+.portfolio .bg:hover{opacity: 0.7;}
