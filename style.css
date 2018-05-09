@@ -70,3 +70,9 @@ header .media a:hover{background: rgba(0, 0, 0, 0.2);}
 .portfolio .bg ul>li>a:hover{box-shadow: 0px 4px 13px 0px black;}
 .portfolio .bg ul>li>a{color: black;border: 1px dashed black; border-radius: 3px; padding: 5px;}
 .portfolio .bg:hover{opacity: 0.7;}
+
+.portfolio .row1{position: relative; display: flex; flex-direction: row; justify-content: space-between;}
+.portfolio .work{width: 30%; border: 1px solid red; height: 90px; overflow: hidden; transition: all 1s;}
+.portfolio .work .wrapper{display: flex; flex-direction: row; justify-content: space-between;}
+.portfolio .work p{background: rgba(0, 0, 0, 0.2);}
+.portfolio .work:hover{overflow: visible; z-index: 1;}
