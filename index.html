@@ -12,11 +12,11 @@
     </div>
     <nav class="menu">
       <ul class="clearfix">
-        <li><a href="">关 于 我<span></span></a></li>
-        <li><a href="">个 人 技 能<span></span></a></li>
-        <li><a href="">作 品 集<span></span></a</li>
-        <li><a href="">个 人 博 客<span></span></a></li>
-        <li><a href="">留 言 板<span></span></a></li>
+        <li><a href="#siteAbout">关 于 我<span></span></a></li>
+        <li><a href="#siteAbout">个 人 技 能<span></span></a></li>
+        <li><a href="#sitePortfolio">作 品 集<span></span></a</li>
+        <li><a href="#siteBlog">个 人 博 客<span></span></a></li>
+        <li><a href="#siteMessage">留 言 板<span></span></a></li>
       </ul>
     </nav>
   </div>
@@ -47,7 +47,7 @@
         </a>
       </div>
     </header>
-    <div class="about">
+    <div class="about" id="siteAbout">
       <div class="left">
         <div class="image">
           <img src="./img/me.png" alt="">
@@ -86,7 +86,7 @@
         </div>
       </div>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="sitePortfolio">
       <h2>作 品 集</h2>
       <p>我的个人部分作品>>></p>
       <div class="row1">
@@ -304,7 +304,7 @@
         </div>
       </div>
     </div>
-    <div class="blog">
+    <div class="blog" id="siteBlog">
       <h2>个 人 博 客</h2>
       <div class="blog-wrapper">
         <div class="blog1">
@@ -327,7 +327,7 @@
         </div>
       </div>
     </div>
-    <div class="message">
+    <div class="message" id="siteMessage">
       <h2>留 言 板</h2>
       <ol id="messageList"></ol>
       <form id="postMessageForm">
@@ -337,11 +337,13 @@
       </form>
   </div>
 <script src="//at.alicdn.com/t/font_654595_kctudvs18o1aif6r.js"></script>
+<script src="./tween.js"></script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts-en.min.js"></script>
 <script src="//cdn1.lncld.net/static/js/3.6.5/av-min.js"></script>
 <script src="./main.js"></script>
 <script src="./skill.js"></script>
+<script src="./smooth.js"></script>
 <script src="./message.js"></script>
 </body>
 </html>
