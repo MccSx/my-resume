@@ -54,20 +54,46 @@ header .media a:hover{background: rgba(0, 0, 0, 0.2);}
   transition: all 0.5s;}
 .about .right .download-wrapper a:hover{box-shadow: 0px 4px 13px 0px #FA6A2E;}
 
-.portfolio{padding: 0 10%; position: relative;}
+.portfolio{padding: 0 10% 10%; position: relative;}
 .portfolio>h2{font-weight: 500;}
 .portfolio>p{font-size: 12px; line-height: 60px;}
 .portfolio>div{display: flex; flex-direction: row;}
 .portfolio .row1,.portfolio .row2{margin-bottom: 27px;}
-
 .portfolio .row1,.portfolio .row2,.portfolio .row3{position: relative; justify-content: space-between;}
 .portfolio .work{width: 30%; box-shadow: 0px 4px 13px 0px #B9BABA;}
-.portfolio .work .wrapper{display: flex; flex-direction: row;}
+.portfolio .work .wrapper{display: flex; flex-direction: row; justify-content: space-between;}
 .portfolio .work .content-wrapper{background: white; height: 0; transition: all 1s; position: absolute; 
-    width: 30%; opacity: 0;}
-.portfolio .work:hover .content-wrapper{height: 200px; opacity: 1; z-index: 1; box-shadow: 0 4px 10px #ECE9E4;}
+    width: 30%; opacity: 0; border-radius: 5px;  box-shadow: inset 0px 0px 13px 0px #ECE9E4; padding: 5px 5px; color: #444450;}
+.portfolio .work .content-wrapper span{font-size: 18px;}
+.portfolio .work .content-wrapper>p:nth-child(1){margin-bottom: 5px;}
+.portfolio .work:hover .content-wrapper{height: 200px; opacity: 1; z-index: 1;}
 .portfolio .link{width: 70%;}
 .portfolio .link h4{font-weight: normal;}
 .portfolio .link h4,.portfolio .link ul>li{text-align: center;}
 .portfolio .link ul{display: flex; justify-content: center; align-items: center;}
-.portfolio .link ul>li{border: 1px solid black; font-size: 12px; width: 30%; margin: 0 auto; margin-top: 8px; float: left; border-radius: 50%;}
+.portfolio .link ul>li{border: 1px solid #B9BABA; border-radius: 5px; padding: 5px 5px; font-size: 12px; margin: 0 auto;
+    margin-top: 8%; float: left; box-shadow: 0 0 5px #B9BABA; transition: all 0.5s;}
+.portfolio .link ul>li:hover{box-shadow: 0px 4px 13px 0px #B9BABA;}
+.portfolio .link a{color: black;}
+.portfolio .row2 .work,.portfolio .row2 .work .content-wrapper{width: 40%;}
+
+.blog{background: #444450; color: white; padding: 5% 10% 10%;}
+.blog a{color: white;}
+.blog h2{margin-bottom: 40px; font-weight: normal;}
+.blog .blog-wrapper{display: flex; flex-direction: row; justify-content: space-between;}
+.blog .blog-wrapper>div{width: 28%;}
+.blog .blog-wrapper img{width: 100%;}
+.blog .blog-wrapper h4,.blog .blog-wrapper p{margin-top: 15px;}
+.blog .blog-wrapper p{margin-bottom: 24px; font-size: 14px;}
+
+.message {margin-bottom: 60px; padding: 0 10%;}
+.message h2{margin-top: 60px; font-weight: normal;}
+.message ol {margin: 40px 0;}
+.message ol>li {color: #616C71; padding: 20px; background: #FCFAFA; margin-bottom: 16px; box-shadow: 0 5px 5px #EAE1DF;}
+.message form {margin: 0 auto; display: flex; flex-direction: column; align-items: center;}
+.message form>label {display: block;}
+.message form>label>span {width: 20%; padding-right: 10px; color: #888;}
+.message form>label:nth-child(2)>span {padding-right: 22px;}
+.message form>label>input {border: 1px solid #dadada; color: #888; height: 30px; margin: 2px 6px 16px 0; padding: 3px 3px 3px 5px; box-shadow: inset 0px 1px 4px #ececec;}
+.message form>input {background: #e27575; border: none; padding: 10px 25px; color: #fff; box-shadow: 1px 1px 5px #b6b6b6; border-radius: 3px; cursor: pointer;}
+.message form>input:hover {background: #cf7a7a;}
