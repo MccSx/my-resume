@@ -24,7 +24,7 @@ let option = {
       { name: 'HTML 5 & CSS 3', max: 100},
       { name: '移动端页面', max: 100},
       { name: 'jQuery', max: 100},
-      { name: '小程序制作', max: 100},
+      { name: '前端工具', max: 100},
       { name: '前端框架', max: 100},
       { name: 'Vue', max: 100}
     ]
