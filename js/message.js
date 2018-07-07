@@ -32,7 +32,7 @@
       veiw: null,
       model: null,
       messageList: null,
-      init: function (view) {
+      init: function (view, model) {
         this.view = view
         this.model = model
         this.messageList = view.querySelector('#messageList')

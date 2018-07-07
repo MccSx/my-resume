@@ -2,7 +2,7 @@
   let view = document.querySelector('nav>ul')
   let controller = {
     view: null,
-    init: function () {
+    init: function (view) {
       this.view = view
       this.initAnimate()
       this.bindEvents()
@@ -18,7 +18,7 @@
       let aTags = this.view.querySelectorAll('li>a')
       for (let i = 0; i < aTags.length; i++) {
         aTags[i].onclick = (e) => {
-          e.preventDefault()
+          // e.preventDefault()
           let hrefName = e.currentTarget.getAttribute('href')
           if (hrefName !== '#') {
             let targetElement = document.querySelector(hrefName)

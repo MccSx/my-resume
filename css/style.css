@@ -23,7 +23,7 @@ a{text-decoration: none;}
 .topNavBar.active ul>li>a{color: black;}
 
 .container{max-width: 80%; margin: 0 auto; box-shadow: 0 0 10px #ECE9E4;}
-header{width: 100%; height: 600px; background-image: url(./img/header.jpg); background-size: 100% 100%; position: relative;}
+header{width: 100%; height: 600px; background-image: url(../img/header.jpg); background-size: 100% 100%; position: relative;}
 header h1,header p,header .down,header .media{position: absolute; color: white; z-index: 1;}
 header::after{content: ''; display: block; width: 100%; height: 100%; background: #444450; opacity: 0.9;}
 header h1,header p,header .down{left: 10%;}
@@ -54,30 +54,51 @@ header .media a:hover{background: rgba(0, 0, 0, 0.2);}
   transition: all 0.5s;}
 .about .right .download-wrapper a:hover{box-shadow: 0px 4px 13px 0px #FA6A2E;}
 
-.portfolio{padding: 0 10% 10%; position: relative;}
-.portfolio>h2{font-weight: 500;}
-.portfolio>p{font-size: 12px; line-height: 60px;}
-.portfolio>div{display: flex; flex-direction: row;}
-.portfolio .row1,.portfolio .row2{margin-bottom: 27px;}
-.portfolio .row1,.portfolio .row2,.portfolio .row3{position: relative; justify-content: space-between;}
-.portfolio .work{width: 30%; box-shadow: 0px 4px 13px 0px #B9BABA;}
-.portfolio .work .wrapper{display: flex; flex-direction: row; justify-content: space-between;}
-.portfolio .work .content-wrapper{background: white; height: 0; transition: all 1s; position: absolute; 
-    width: 30%; opacity: 0; border-radius: 5px;  box-shadow: inset 0px 0px 13px 0px #ECE9E4; padding: 5px 5px; color: #444450;}
-.portfolio .work .content-wrapper span{font-size: 18px;}
-.portfolio .work .content-wrapper>p:nth-child(1){margin-bottom: 5px;}
-.portfolio .work:hover .content-wrapper{height: 200px; opacity: 1; z-index: 1;}
-.portfolio .link{width: 70%;}
-.portfolio .link h4{font-weight: normal;}
-.portfolio .link h4,.portfolio .link ul>li{text-align: center;}
-.portfolio .link ul{display: flex; justify-content: center; align-items: center;}
-.portfolio .link ul>li{border: 1px solid #B9BABA; border-radius: 5px; padding: 5px 5px; font-size: 12px; margin: 0 auto;
-    margin-top: 8%; float: left; box-shadow: 0 0 5px #B9BABA; transition: all 0.5s;}
-.portfolio .link ul>li:hover{box-shadow: 0px 4px 13px 0px #B9BABA;}
-.portfolio .link a{color: black;}
-.portfolio .row2 .work,.portfolio .row2 .work .content-wrapper{width: 40%;}
+.portfolio{padding: 5% 10%; transform: translateY(-120px); position: relative; }
+.portfolio .bg{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #444450; 
+    opacity: 0.9; z-index: -1; background-image: url(../img/work2.jpg); background-position: center; 
+    background-size: cover; filter: blur(10px);}
+.portfolio>h2{font-weight: 500; color: white; position: absolute; top: 2%;}
+.portfolio .works-wrapper{height: 400px; display: flex; flex-direction: row; box-shadow: 0px 8px 26px 0px black;}
+.portfolio .work1{background-image: url(../img/work1.jpg);}
+.portfolio .work2{background-image: url(../img/work2.jpg);}
+.portfolio .work3{background-image: url(../img/work3.jpg);}
+.portfolio .work4{background-image: url(../img/work4.jpg);}
+.portfolio .work5{background-image: url(../img/work5.jpg);}
+.portfolio .work6{background-image: url(../img/work6.jpg);}
+.portfolio .work1,.portfolio .work2,.portfolio .work3,
+.portfolio .work4,.portfolio .work5,.portfolio .work6{width: 5%; height: 100%; background-size: cover;  
+    background-position-x: right; position: relative;}
+.portfolio .work1.active,.portfolio .work2.active,.portfolio .work3.active,
+.portfolio .work4.active,.portfolio .work5.active,.portfolio .work6.active{width: 100%;}
+.portfolio .work-wrapper{position: absolute; left: 4%; bottom: 6%; color: white; display: none;}
+.portfolio .work1.active .work-wrapper,.portfolio .work2.active .work-wrapper,
+.portfolio .work3.active .work-wrapper,.portfolio .work4.active .work-wrapper,
+.portfolio .work5.active .work-wrapper,.portfolio .work6.active .work-wrapper{display: block;}
+.portfolio .open{width: 2em; height: 2em; display: flex; justify-content: center; align-items: center; 
+    border-radius: 50%; color: white; position: absolute; top: 50%; margin-top: -50%; cursor: pointer;}
+.portfolio .open:hover{background: rgba(0, 0, 0, 0.2);}
+.portfolio .open .icon{position: absolute; font-size: 22px;}
+.portfolio .work1.left .ll,.portfolio .work2.left .ll,
+.portfolio .work3.left .ll,.portfolio .work4.left .ll,
+.portfolio .work5.left .ll,.portfolio .work6.left .ll{display: none;}
+.portfolio .work1.left .rr,.portfolio .work2.left .rr,
+.portfolio .work3.left .rr,.portfolio .work4.left .rr,
+.portfolio .work5.left .rr,.portfolio .work6.left .rr{display: inline-block;}
+.portfolio .work1.right .ll,.portfolio .work2.right .ll,
+.portfolio .work3.right .ll,.portfolio .work4.right .ll,
+.portfolio .work5.right .ll,.portfolio .work6.right .ll{display: inline-block;}
+.portfolio .work1.right .rr,.portfolio .work2.right .rr,
+.portfolio .work3.right .rr,.portfolio .work4.right .rr,
+.portfolio .work5.right .rr,.portfolio .work6.right .rr{display: none;}
+.portfolio .work1.active .open,.portfolio .work2.active .open,
+.portfolio .work3.active .open,.portfolio .work4.active .open,
+.portfolio .work5.active .open,.portfolio .work6.active .open{display: none;}
+.portfolio .work-wrapper .name{margin-top: 10px;}
+.portfolio .work-wrapper .more{margin-top: 2px; font-size: 12px; cursor: pointer;}
+.portfolio .work-wrapper .more:hover{color: #FA6A2E;}
 
-.blog{background: #444450; color: white; padding: 5% 10% 10%;}
+.blog{background: #444450; color: white; padding: 5% 10% 10%; transform: translateY(-80px);}
 .blog a{color: white;}
 .blog h2{margin-bottom: 40px; font-weight: normal;}
 .blog .blog-wrapper{display: flex; flex-direction: row; justify-content: space-between;}
@@ -86,7 +107,7 @@ header .media a:hover{background: rgba(0, 0, 0, 0.2);}
 .blog .blog-wrapper h4,.blog .blog-wrapper p{margin-top: 15px;}
 .blog .blog-wrapper p{margin-bottom: 24px; font-size: 14px;}
 
-.message {margin-bottom: 60px; padding: 0 10%;}
+.message {margin-bottom: 60px; padding: 0 10%; transform: translateY(-80px);}
 .message h2{margin-top: 60px; font-weight: normal;}
 .message ol {margin: 40px 0;}
 .message ol>li {color: #616C71; padding: 20px; background: #FCFAFA; margin-bottom: 16px; box-shadow: 0 5px 5px #EAE1DF;}
