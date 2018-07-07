@@ -9,19 +9,33 @@
     },
     bindEvents: function () {
       let openTags = this.view.querySelectorAll('.open')
+      let workTags = this.view.querySelector('.works-wrapper').children
+      let bgTag = this.view.querySelector('.bg')
       for (let i=0; i<openTags.length; i++) {
         openTags[i].onclick = (e) => {
-          console.log(e.target.parentNode)
-        }
-      }
-    },
-    changeClassName:function (el, className) {
-      let childs = el.parentNode.children
-      for (let i=0; i<childs.length; i++) {
-        if (childs[i] === el) {
-          childs[i].classList.add(className)
-        } else {
-          childs[i].classList.remove(className)
+          let n,m
+          for (let i=0; i<workTags.length; i++) {
+            if (e.currentTarget.parentNode === workTags[i]) {
+              workTags[i].classList.remove('left')
+              workTags[i].classList.remove('right')
+              workTags[i].classList.add('active')
+              bgTag.style.backgroundImage = `url("./img/${workTags[i].classList[0]}.jpg")`
+              n = i
+              m = i
+            } else {
+              workTags[i].classList.remove('active')
+            }
+          }
+          while(n>0) {
+            workTags[n-1].classList.remove('right')
+            workTags[n-1].classList.add('left')
+            n--
+          }
+          while(m<openTags.length-1) {
+            workTags[m+1].classList.remove('left')
+            workTags[m+1].classList.add('right')
+            m++
+          }
         }
       }
     }

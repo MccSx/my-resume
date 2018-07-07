@@ -56,10 +56,9 @@ header .media a:hover{background: rgba(0, 0, 0, 0.2);}
 
 .portfolio{padding: 5% 10%; transform: translateY(-120px); position: relative; }
 .portfolio .bg{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #444450; 
-    opacity: 0.9; z-index: -1; background-image: url(../img/work2.jpg); background-position: center; 
-    background-size: cover; filter: blur(10px);}
+    opacity: 0.9; z-index: -1; background-image: url(../img/work2.jpg); background-position: center; background-size: 200% 200%; filter: blur(20px);}
 .portfolio>h2{font-weight: 500; color: white; position: absolute; top: 2%;}
-.portfolio .works-wrapper{height: 400px; display: flex; flex-direction: row; box-shadow: 0px 8px 26px 0px black;}
+.portfolio .works-wrapper{height: 36vw; display: flex; flex-direction: row; box-shadow: 0px 8px 26px 0px black;}
 .portfolio .work1{background-image: url(../img/work1.jpg);}
 .portfolio .work2{background-image: url(../img/work2.jpg);}
 .portfolio .work3{background-image: url(../img/work3.jpg);}
@@ -68,15 +67,15 @@ header .media a:hover{background: rgba(0, 0, 0, 0.2);}
 .portfolio .work6{background-image: url(../img/work6.jpg);}
 .portfolio .work1,.portfolio .work2,.portfolio .work3,
 .portfolio .work4,.portfolio .work5,.portfolio .work6{width: 5%; height: 100%; background-size: cover;  
-    background-position-x: right; position: relative;}
+    background-position-x: right; background-repeat: no-repeat; position: relative; transition: width 0.5s;}
 .portfolio .work1.active,.portfolio .work2.active,.portfolio .work3.active,
-.portfolio .work4.active,.portfolio .work5.active,.portfolio .work6.active{width: 100%;}
+.portfolio .work4.active,.portfolio .work5.active,.portfolio .work6.active{width: 75%;}
 .portfolio .work-wrapper{position: absolute; left: 4%; bottom: 6%; color: white; display: none;}
 .portfolio .work1.active .work-wrapper,.portfolio .work2.active .work-wrapper,
 .portfolio .work3.active .work-wrapper,.portfolio .work4.active .work-wrapper,
 .portfolio .work5.active .work-wrapper,.portfolio .work6.active .work-wrapper{display: block;}
 .portfolio .open{width: 2em; height: 2em; display: flex; justify-content: center; align-items: center; 
-    border-radius: 50%; color: white; position: absolute; top: 50%; margin-top: -50%; cursor: pointer;}
+    border-radius: 50%; color: white; position: absolute; top: 50%; left: 50%; margin-top: -1em; margin-left: -1em; cursor: pointer;}
 .portfolio .open:hover{background: rgba(0, 0, 0, 0.2);}
 .portfolio .open .icon{position: absolute; font-size: 22px;}
 .portfolio .work1.left .ll,.portfolio .work2.left .ll,
@@ -94,12 +93,14 @@ header .media a:hover{background: rgba(0, 0, 0, 0.2);}
 .portfolio .work1.active .open,.portfolio .work2.active .open,
 .portfolio .work3.active .open,.portfolio .work4.active .open,
 .portfolio .work5.active .open,.portfolio .work6.active .open{display: none;}
-.portfolio .work-wrapper .name{margin-top: 10px;}
+.portfolio .work-wrapper .name{margin-top: 10px; font-weight: bold; font-size: 20px;}
 .portfolio .work-wrapper .more{margin-top: 2px; font-size: 12px; cursor: pointer;}
-.portfolio .work-wrapper .more:hover{color: #FA6A2E;}
+.portfolio .work-wrapper .more a{color: white;}
+.portfolio .work-wrapper .more a:hover{color: #FA6A2E;}
 
 .blog{background: #444450; color: white; padding: 5% 10% 10%; transform: translateY(-80px);}
 .blog a{color: white;}
+.blog a:hover{color: #FA6A2E;}
 .blog h2{margin-bottom: 40px; font-weight: normal;}
 .blog .blog-wrapper{display: flex; flex-direction: row; justify-content: space-between;}
 .blog .blog-wrapper>div{width: 28%;}
