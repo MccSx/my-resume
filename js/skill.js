@@ -21,7 +21,7 @@ let option = {
         }
     },
     indicator: [
-      { name: 'HTML 5 & CSS 3', max: 100},
+      { name: 'HTML5 & CSS3', max: 100},
       { name: '移动端页面', max: 100},
       { name: 'jQuery', max: 100},
       { name: '前端工具', max: 100},
