@@ -18,7 +18,6 @@
       let aTags = this.view.querySelectorAll('li>a')
       for (let i = 0; i < aTags.length; i++) {
         aTags[i].onclick = (e) => {
-          // e.preventDefault()
           let hrefName = e.currentTarget.getAttribute('href')
           if (hrefName !== '#') {
             let targetElement = document.querySelector(hrefName)
